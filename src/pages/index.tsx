@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const API_ENDPOINT = "http://52.21.115.180:8000/";
+const API_ENDPOINT = "http://98.80.18.248:8000";
 
 const HomePage: NextPage = () => {
     const [filter, setFilter] = useState({
