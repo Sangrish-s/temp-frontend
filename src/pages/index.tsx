@@ -35,7 +35,7 @@ const API_ENDPOINT = "http://98.80.18.248:8000/";
 
 const HomePage: NextPage = () => {
     const [filter, setFilter] = useState({
-        select: "All",
+        select: "10-K",
         search: "",
     });
     const [pagination, setPagination] = useState({
