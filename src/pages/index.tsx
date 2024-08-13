@@ -96,7 +96,7 @@ const HomePage: NextPage = () => {
 
         setFileLoading(false);
     };
-
+    console.log(fileItem)
     const showHandle = async (type: string, option?: string) => {
         setScanning(true);
         try {
@@ -111,7 +111,7 @@ const HomePage: NextPage = () => {
                 }[type],
                 withCredentials: false,
                 params: {
-                    url: selected?.url || "",
+                    url: selected?.linkToFilingDetails || "",
                     k_type: option
                 }
             });
