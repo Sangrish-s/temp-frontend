@@ -214,12 +214,12 @@ const HomePage: NextPage = () => {
                                                 key={`file-${index}`}
                                             >
                                                 <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                                                    <div>{file.filing_date}</div>
+                                                    <div>{file.filedAt}</div>
                                                 </div>
                                                 <div>
-                                                    {file.form_type}
+                                                    {file.formType}
                                                 </div>
-                                                <a target="_blank" href={`${file.url}`}>source</a>
+                                                <a target="_blank" href={`${file.linkToHtml}`}>source</a>
                                             </button>
                                         ))}
                                     </ButtonList>
