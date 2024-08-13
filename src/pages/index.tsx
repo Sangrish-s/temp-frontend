@@ -96,7 +96,7 @@ const HomePage: NextPage = () => {
 
         setFileLoading(false);
     };
-    console.log("file_item" , fileItem)
+    console.log("hi" , fileItem)
     const showHandle = async (type: string, option?: string) => {
         setScanning(true);
         try {
@@ -334,7 +334,7 @@ const HomePage: NextPage = () => {
                             <>
                                 {scanning && <ScanLoader />}
                                 <div style={{ height: "100%", overflow: "auto" }}>
-                                    <iframe src={selected.linkToFilingDetails} style={{ width: "100%", height: "100%", border: "none" }} />
+                                    <FileViewer dangerouslySetInnerHTML={{ __html: selected.linkToFilingDetails || "" }} />
                                 </div>
                             </>
                         )}
