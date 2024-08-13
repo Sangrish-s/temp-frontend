@@ -89,7 +89,7 @@ const HomePage: NextPage = () => {
                     url: fl.linkToFilingDetails,
                 }
             });
-            setFileItem(replaceRelativeImgPaths(data, fl.url));
+            setFileItem(replaceRelativeImgPaths(data, fl.linkToFilingDetails));
         } catch (e) {
             console.log(e);
         }
