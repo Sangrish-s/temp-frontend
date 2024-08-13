@@ -13,6 +13,14 @@ const replaceRelativeImgPaths = (html: string, url: string): string => {
 
 const getBaseUrl = (url: string): string => {
   const parsedUrl = new URL(url);
+
+  // For SEC links, adjust the base URL
+  if (parsedUrl.hostname === 'www.sec.gov') {
+    // Extract up to the last directory before the file name
+    return `${parsedUrl.protocol}//${parsedUrl.host}${parsedUrl.pathname.substring(0, parsedUrl.pathname.lastIndexOf('/') + 1)}`;
+  }
+
+  // General case
   return `${parsedUrl.protocol}//${
     parsedUrl.host
   }${parsedUrl.pathname.substring(0, parsedUrl.pathname.lastIndexOf("/") + 1)}`;
