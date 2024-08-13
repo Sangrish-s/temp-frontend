@@ -35,7 +35,7 @@ const API_ENDPOINT = "https://smartfilings.net:8000/";
 
 const HomePage: NextPage = () => {
     const [filter, setFilter] = useState({
-        select: "10-K",
+        select: "8-K",
         search: "",
     });
     const [pagination, setPagination] = useState({
@@ -86,7 +86,7 @@ const HomePage: NextPage = () => {
                 url: `${API_ENDPOINT}get_filing_html`,
                 withCredentials: false,
                 params: {
-                    url: fl.url,
+                    url: fl.linkToFilingDetails,
                 }
             });
             setFileItem(replaceRelativeImgPaths(data, fl.url));
@@ -219,7 +219,7 @@ const HomePage: NextPage = () => {
                                                 <div>
                                                     {file.formType}
                                                 </div>
-                                                <a target="_blank" href={`${file.linkToHtml}`}>source</a>
+                                                <a target="_blank" href={`${file.linkToFilingDetails}`}>source</a>
                                             </button>
                                         ))}
                                     </ButtonList>
