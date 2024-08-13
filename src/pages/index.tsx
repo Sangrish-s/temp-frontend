@@ -334,7 +334,7 @@ const HomePage: NextPage = () => {
                             <>
                                 {scanning && <ScanLoader />}
                                 <div style={{ height: "100%", overflow: "auto" }}>
-                                    <FileViewer dangerouslySetInnerHTML={{ __html: selected.linkToFilingDetails || "" }} />
+                                    <FileViewer dangerouslySetInnerHTML={{ __html: fileItem || "" }} />
                                 </div>
                             </>
                         )}
