@@ -91,12 +91,12 @@ const HomePage: NextPage = () => {
             });
             setFileItem(replaceRelativeImgPaths(data, fl.linkToFilingDetails));
         } catch (e) {
-            console.log(e);
+            console.log("hi",e);
         }
 
         setFileLoading(false);
     };
-    console.log(fileItem)
+    console.log("file_item" , fileItem)
     const showHandle = async (type: string, option?: string) => {
         setScanning(true);
         try {
