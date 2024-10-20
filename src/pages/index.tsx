@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const API_ENDPOINT = "ii4i.net:8000/";
+const API_ENDPOINT = "https://ii4i.net/";
 
 const HomePage: NextPage = () => {
     const [filter, setFilter] = useState({
